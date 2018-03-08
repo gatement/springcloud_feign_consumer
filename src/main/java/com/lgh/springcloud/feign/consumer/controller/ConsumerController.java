@@ -17,11 +17,6 @@ public class ConsumerController {
 	RefactorHelloService refactorHelloService;
 
 	@RequestMapping(value = "feign-consumer", method = RequestMethod.GET)
-	public String helloConsumer() {
-		return helloService.hello();
-	}
-
-	@RequestMapping(value = "feign-consumer2", method = RequestMethod.GET)
 	public String helloConsumer2() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(helloService.hello()).append("\n");
@@ -31,7 +26,7 @@ public class ConsumerController {
 		return sb.toString();
 	}
 
-	@RequestMapping(value = "feign-consumer3", method = RequestMethod.GET)
+	@RequestMapping(value = "feign-consumer2", method = RequestMethod.GET)
 	public String helloConsumer3() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(refactorHelloService.hello("JohnsonLau")).append("\n");

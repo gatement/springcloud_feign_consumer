@@ -1,2 +1,7 @@
-# package
-* Run `./mvnw -s .mvn/settings.xml package`
+# description
+* register to eureka server
+* consume HELLO-SERVICE from eureka server
+* client load balanced with feign
+
+## run
+* `./mvnw spring-boot:run`
